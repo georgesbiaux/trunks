@@ -1,0 +1,9 @@
+{
+  "name": "trunks",
+  "version": "0.0.1",
+  "description": "Load testing tool destined to simulate the use of a web application by a important number of users.",
+  "main": "index.js",
+  "repository": "git@github.com:georgesbiaux/trunks.git",
+  "author": "georgesbiaux <georgesb@theodo.fr>",
+  "license": "MIT"
+}
