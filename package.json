@@ -13,7 +13,9 @@
   "author": "georgesbiaux <georgesb@theodo.fr>",
   "license": "MIT",
   "dependencies": {
-    "esm": "^3.2.25"
+    "arg": "^4.1.1",
+    "esm": "^3.2.25",
+    "inquirer": "^7.0.0"
   },
   "keywords": [
     "cli",
