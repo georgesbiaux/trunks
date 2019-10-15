@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Load testing tool destined to simulate the use of a web application by a important number of users.",
   "main": "index.js",
-  "bin": {
-    "trunks": "bin/trunks"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -14,11 +11,16 @@
   "license": "MIT",
   "dependencies": {
     "arg": "^4.1.1",
+    "chrome-aws-lambda": "^1.20.2",
     "esm": "^3.2.25",
-    "inquirer": "^7.0.0"
+    "inquirer": "^7.0.0",
+    "puppeteer-core": "^1.20.0"
   },
   "keywords": [
     "cli",
     "trunks"
-  ]
+  ],
+  "devDependencies": {
+    "serverless": "^1.54.0"
+  }
 }
