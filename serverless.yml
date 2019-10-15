@@ -10,3 +10,6 @@ functions:
     handler: handler.exec
     timeout: 300
     memorySize: 512
+
+plugins:
+  - serverless-step-functions

@@ -21,6 +21,7 @@
     "trunks"
   ],
   "devDependencies": {
-    "serverless": "^1.54.0"
+    "serverless": "^1.54.0",
+    "serverless-step-functions": "^2.10.1"
   }
 }
