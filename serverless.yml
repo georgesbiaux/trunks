@@ -9,4 +9,4 @@ functions:
   exec:
     handler: handler.exec
     timeout: 300
-    memorySize: 1600
+    memorySize: 512

@@ -23,6 +23,7 @@ module.exports.exec = async event => {
     await invoke(browser);
     const duration = Date.now() - start;
 
+    browser.close();
     response = {
       statusCode: 200,
       body: {
