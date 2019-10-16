@@ -28,6 +28,15 @@ function getArgumentValue(argumentName) {
 
   const results = await exec(command);
 
-  console.log(results);
+  if (results.stderr) {
+    console.log(results.stderr);
+    return process.exit(1);
+  }
+
+  const output = results.stdout.match(/output:.*'.*'/s)[0];
+  const responses = JSON.parse(output.substring(output.indexOf('[')).replace("'", ''));
+  const formattedResults = responses.map(response => response.body);
+
+  console.table(formattedResults);
   console.log('DONE!');
 })();

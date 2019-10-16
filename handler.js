@@ -3,7 +3,7 @@ const chromium = require('chrome-aws-lambda');
 const puppeteer = require('puppeteer-core');
 const { invoke } = require('./src/test-script');
 
-module.exports.exec = async event => {
+module.exports.exec = async () => {
   let response;
   try {
     const chromiumOptions = {
@@ -27,8 +27,6 @@ module.exports.exec = async event => {
     response = {
       statusCode: 200,
       body: {
-        message: 'Load test has ended!',
-        input: event,
         duration: duration,
       },
     };
@@ -37,8 +35,6 @@ module.exports.exec = async event => {
     response = {
       statusCode: 200,
       body: {
-        message: 'Load test has failed!',
-        input: event,
         error: e,
       },
     };
