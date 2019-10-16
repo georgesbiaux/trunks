@@ -11,5 +11,29 @@ functions:
     timeout: 300
     memorySize: 512
 
+stepFunctions:
+  stateMachines:
+    execstepfunc:
+      events:
+      - http:
+          path: start
+          method: post
+      definition:
+        StartAt: LoadTest
+        States:
+          LoadTest:
+            Type: Map
+            InputPath: $.tests
+            MaxConcurrency: 1000
+            Iterator:
+              StartAt: SingleTest
+              States:
+                SingleTest:
+                  Type: Task
+                  Resource: "arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:${self:service}-${opt:stage}-exec"
+                  End: true
+            End: true
+
 plugins:
   - serverless-step-functions
+  - serverless-pseudo-parameters
