@@ -18,7 +18,6 @@ module.exports.exec = async () => {
 
     const browser = await puppeteer.launch(chromiumOptions);
 
-    console.log(`Starting test with id ${123}`);
     const start = Date.now();
     await invoke(browser);
     const duration = Date.now() - start;

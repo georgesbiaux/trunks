@@ -26,7 +26,6 @@
   "scripts": {
     "deploy": "serverless deploy --stage dev",
     "invoke": "node cluster.js",
-    "invoke:single": "serverless invoke -f exec",
     "invoke:local": "node local.js"
   }
 }

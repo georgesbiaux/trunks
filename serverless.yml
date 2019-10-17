@@ -1,4 +1,4 @@
-service: load-testing-lambda
+service: trunks
 
 provider:
   name: aws

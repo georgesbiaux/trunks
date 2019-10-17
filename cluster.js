@@ -22,7 +22,7 @@ function getArgumentValue(argumentName) {
   console.log(`Launching load test cluster with ${clusterSize} nodes`);
 
   const clusterArray = new Array(clusterSize).fill(0);
-  const command = `serverless invoke stepf --name execstepfunc --stage dev --data '${JSON.stringify({
+  const command = `${__dirname}/node_modules/.bin/serverless invoke stepf --name execstepfunc --stage dev --data '${JSON.stringify({
     tests: clusterArray,
   })}'`;
 
